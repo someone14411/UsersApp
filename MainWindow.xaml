@@ -4,9 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UsersApp"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="UsersApp" Height="600" Width="800"
+        Style="{StaticResource MaterialDesignWindow}">
     <Grid>
-        
+        <Border MinWidth="400" MaxWidth="550" Padding="30" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Welcome" FontSize="25" FontWeight="SemiBold" Margin="0 0 0 20" />
+                <Grid Margin="0 0 0 20">
+                    <Button Content="Sign In" HorizontalAlignment="Left" />
+                    <Button Content="Log In" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}" />
+                </Grid>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Login" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <PasswordBox x:Name="passBoxConfirm" materialDesign:HintAssist.Hint="Confirm password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <Button Content="Registration" Margin="0 20" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
